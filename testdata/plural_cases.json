@@ -1,0 +1,119 @@
+[
+  {
+    "why": "English: the ordinary two-form case.",
+    "locale": "en",
+    "forms": { "one": ":count post", "other": ":count posts" },
+    "cases": [
+      { "n": 0, "want": "0 posts" },
+      { "n": 1, "want": "1 post" },
+      { "n": 2, "want": "2 posts" },
+      { "n": 21, "want": "21 posts" }
+    ]
+  },
+  {
+    "why": "An exact count beats the category, which is the useful half of Laravel's interval syntax: 'no posts yet' is a different sentence from '0 posts'.",
+    "locale": "en",
+    "forms": { "=0": "no posts yet", "one": ":count post", "other": ":count posts" },
+    "cases": [
+      { "n": 0, "want": "no posts yet" },
+      { "n": 1, "want": "1 post" }
+    ]
+  },
+  {
+    "why": "French uses 'one' for both 0 and 1. This is the case that catches a hand-rolled n === 1 on either side of the wire.",
+    "locale": "fr",
+    "forms": { "one": ":count publication", "other": ":count publications" },
+    "cases": [
+      { "n": 0, "want": "0 publication" },
+      { "n": 1, "want": "1 publication" },
+      { "n": 2, "want": "2 publications" }
+    ]
+  },
+  {
+    "why": "Russian has three forms, and this is the shape Laravel gets wrong: with only two segments and a count of 5 it returns the singular.",
+    "locale": "ru",
+    "forms": {
+      "one": ":count яблоко",
+      "few": ":count яблока",
+      "many": ":count яблок",
+      "other": ":count яблока"
+    },
+    "cases": [
+      { "n": 1, "want": "1 яблоко" },
+      { "n": 2, "want": "2 яблока" },
+      { "n": 5, "want": "5 яблок" },
+      { "n": 11, "want": "11 яблок" },
+      { "n": 21, "want": "21 яблоко" },
+      { "n": 100, "want": "100 яблок" }
+    ]
+  },
+  {
+    "why": "A Russian message a translator only wrote two forms of must degrade to the plural, never to the singular. This is the Laravel bug, asserted as not happening.",
+    "locale": "ru",
+    "forms": { "one": ":count яблоко", "other": ":count яблок" },
+    "cases": [
+      { "n": 1, "want": "1 яблоко" },
+      { "n": 5, "want": "5 яблок" },
+      { "n": 100, "want": "100 яблок" }
+    ]
+  },
+  {
+    "why": "Arabic uses all six.",
+    "locale": "ar",
+    "forms": {
+      "zero": "لا كتب",
+      "one": "كتاب واحد",
+      "two": "كتابان",
+      "few": ":count كتب",
+      "many": ":count كتابا",
+      "other": ":count كتاب"
+    },
+    "cases": [
+      { "n": 0, "want": "لا كتب" },
+      { "n": 1, "want": "كتاب واحد" },
+      { "n": 2, "want": "كتابان" },
+      { "n": 3, "want": "3 كتب" },
+      { "n": 11, "want": "11 كتابا" },
+      { "n": 100, "want": "100 كتاب" }
+    ]
+  },
+  {
+    "why": "Japanese has one form, so every count reads the same.",
+    "locale": "ja",
+    "forms": { "other": ":count件" },
+    "cases": [
+      { "n": 0, "want": "0件" },
+      { "n": 1, "want": "1件" },
+      { "n": 7, "want": "7件" }
+    ]
+  },
+  {
+    "why": "Welsh has six categories and an unusual distribution; it is here because it is the locale a plausible-looking shortcut gets wrong.",
+    "locale": "cy",
+    "forms": {
+      "zero": "dim cathod",
+      "one": ":count gath",
+      "two": ":count gath",
+      "few": ":count cath",
+      "many": ":count chath",
+      "other": ":count cath"
+    },
+    "cases": [
+      { "n": 0, "want": "dim cathod" },
+      { "n": 1, "want": "1 gath" },
+      { "n": 2, "want": "2 gath" },
+      { "n": 3, "want": "3 cath" },
+      { "n": 6, "want": "6 chath" },
+      { "n": 10, "want": "10 cath" }
+    ]
+  },
+  {
+    "why": "A negative count reads its absolute value's form, which is what CLDR specifies.",
+    "locale": "en",
+    "forms": { "one": ":count degree", "other": ":count degrees" },
+    "cases": [
+      { "n": -1, "want": "-1 degree" },
+      { "n": -4, "want": "-4 degrees" }
+    ]
+  }
+]

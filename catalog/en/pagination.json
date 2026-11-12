@@ -1,0 +1,9 @@
+{
+  "previous": "Previous",
+  "next": "Next",
+  "showing": {
+    "=0": "No results",
+    "one": "Showing 1 result",
+    "other": "Showing :first to :last of :total results"
+  }
+}

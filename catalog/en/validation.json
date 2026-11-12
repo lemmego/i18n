@@ -1,0 +1,79 @@
+{
+  "required": "This field is required",
+  "filled": "This field must be filled",
+  "equals": "This field must match with the provided value",
+
+  "min": {
+    "numeric": "This field must be at least :min",
+    "string": "This field must be at least :min characters",
+    "array": "This field must have at least :min items",
+    "file": "This file is smaller than :min"
+  },
+  "max": {
+    "numeric": "This field must not exceed :max",
+    "string": "This field must not exceed :max characters",
+    "array": "This field must not have more than :max items",
+    "file": "This file is larger than :max"
+  },
+  "between": {
+    "numeric": "This field must be between :min and :max",
+    "string": "This field must be between :min and :max characters",
+    "array": "This field must have between :min and :max items"
+  },
+
+  "email": "This field must be a valid email address",
+  "url": "This field must be a valid URL",
+  "ip": "This field must be a valid IP address",
+  "uuid": "This field must be a valid UUID",
+  "ulid": "This field must be a valid ULID",
+  "mac_address": "This field must be a valid MAC address",
+  "hex_color": "This field must be a valid hexadecimal color code",
+  "json": "This field must be a valid JSON string",
+  "boolean": "This field must be a boolean value",
+  "timezone": "Invalid timezone",
+
+  "alpha": "This field must contain only alphabetic characters",
+  "numeric": "This field must contain only numeric characters",
+  "alpha_num": "This field must contain only alphanumeric characters",
+  "alpha_dash": "This field may only contain alpha-numeric characters, dashes, and underscores",
+  "ascii": "This field may only contain ASCII characters",
+
+  "date_format": "This field must be a valid date in the format :format",
+  "after": "This field must be a date after :date",
+  "before": "This field must be a date before :date",
+
+  "in": "This field must be one of the following: :values",
+  "starts_with": "This field must start with :value",
+  "ends_with": "This field must end with :value",
+  "contains": "This field must contain :value",
+  "regex": "This field must match the pattern: :pattern",
+  "regex_pattern_invalid": "Invalid regular expression pattern",
+
+  "array": "This field must be an array or slice",
+  "array_empty": "This field cannot be empty",
+  "distinct": "This field must contain only unique values",
+
+  "active_url": "The URL is not active or reachable",
+  "active_url_status": "The URL returned a non-OK status",
+  "active_url_too_large": "The URL response is too large",
+
+  "file_unopenable": "Unable to open the file",
+  "file_undecodable": "Unable to decode the image",
+  "file_unreadable": "Unable to read the file",
+  "file_type": "File type must be one of: :values",
+  "dimensions": "Image dimensions must be :widthx:height",
+
+  "upload_unreadable": "This file could not be read",
+  "mimes": "This file must be one of: :values",
+  "image": "This file is not an image",
+  "image_dimensions": {
+    "min": "This image must be at least :widthx:height pixels",
+    "max": "This image must be at most :widthx:height pixels"
+  },
+  "file_prefixed": ":file — :message",
+
+  "check_failed": "This field could not be validated",
+  "uncheckable": "This value could not be checked",
+  "unique": "This :attribute is already taken",
+  "exists": "This :attribute does not exist"
+}
